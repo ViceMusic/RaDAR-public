@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "from": "prediction.html",
+      "link": ".brand",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "prediction.html",
+      "link": ".site-nav a:first-child",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "dataset.html",
+      "link": ".brand",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "dataset.html",
+      "link": ".site-nav a:first-child",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "workflow.html",
+      "link": ".brand",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "workflow.html",
+      "link": ".site-nav a:first-child",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "about.html",
+      "link": ".brand",
+      "destination": "prediction.html",
+      "engine_ready": true
+    },
+    {
+      "from": "about.html",
+      "link": ".site-nav a:first-child",
+      "destination": "prediction.html",
+      "engine_ready": true
+    }
+  ],
+  "external_launcher_preserves_language": true,
+  "prediction_probability": "84.24%",
+  "independent_hosting_under_prefix": true,
+  "readme_requests": [],
+  "javascript_errors": [],
+  "failed_resources": []
+}

@@ -54,7 +54,7 @@ Chrome 直接打开 file:// 进行测试，不启动网页服务器。
 
 ## 本地文件
 
-- `../index.html`：外置预测入口；`styles.css` / `app.js`：页面样式与交互。
+- `../index.html`：外置启动入口；`prediction.html`：分子预测页面；`styles.css` / `app.js`：页面样式与交互。
 - `chemistry.js` / `chemistry-data.js`：一致的特征计算与官方参数。
 - `inference.js`：三类模型的纯JS推理。
 - `models/`：模型JSON、直接加载的JS包装和配置。
@@ -101,7 +101,7 @@ WASM以JS内嵌字节载入，使 file:// 直接打开不受WASM文件fetch限�
 
 ## RaDAR协议、来源与团队
 
-顶部导航现在包含四个静态页面：`../index.html`（分子预测）、`dataset.html`（数据集探索）、`workflow.html`（RaDAR协议）、`about.html`（来源与团队）。数据集名称和完整介绍均位于可视化之前。
+顶部导航现在包含四个静态页面：`prediction.html`（分子预测）、`dataset.html`（数据集探索）、`workflow.html`（RaDAR协议）、`about.html`（来源与团队）。数据集名称和完整介绍均位于可视化之前。
 
 `workflow.html` 严格依据 `paper/main.tex` 的 Ranking-aware Evaluation Protocol 部分，展示协议输入、域内验证与跨来源诊断、排序感知的适应评价、独立评价与结果解释。`about.html` 为五个来源提供 Coming soon 占位，并按 Tiange、Wenjia He、Suyu Dong 的页面展示顺序呈现作者；联系方式为 tian@lmd.ist.hokudai.ac.jp。数据保密说明对应论文的外部 Dataset-X。
 
@@ -126,4 +126,8 @@ RaDAR 协议页开头说明其定位为研究工作流的系统整理，并补�
 
 ## 外置入口与资源边界
 
-预测入口已移至项目根目录 `index.html`，`web_demo/index.html` 已删除。其余三个页面和全部样式、脚本、模型、数据、校徽及测试资源仍保留在 `web_demo/`。站内导航与语言参数保留相对目录；动态对照样本从 `app.js` 所在目录解析加载。除外置入口自身外，demo 的本地资源仅来自 `web_demo/`，不依赖项目根目录的其他文件或其他项目文件夹。
+项目根目录 `index.html` 为启动入口，通过 `web_demo/entry.js` 转至 `web_demo/prediction.html`，保留语言参数。`web_demo/index.html` 保持删除。
+
+四个功能页面、Logo 和站内导航均在 `web_demo/` 内跳转：`prediction.html`、`dataset.html`、`workflow.html`、`about.html`。Logo 始终进入分子预测。站内导航不再依赖 `../index.html`，可直接打开或独立托管 `web_demo/prediction.html`。
+
+样式、脚本、模型、数据、校徽及测试资源全部位于 `web_demo/`；不使用根目录的 README 或其他项目文件。预测页底部“查看模型与验证说明”是唯一主动打开 demo README 的说明链接，与 Logo 无关。

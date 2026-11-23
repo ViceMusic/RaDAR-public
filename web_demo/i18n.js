@@ -35,7 +35,7 @@ function convertAttributes(el){
  for(const attr of ['title','aria-label','placeholder']){if(!el.hasAttribute(attr))continue;const value=el.getAttribute(attr),old=cache[attr],original=old&&value===old.rendered?old.original:value,rendered=translate(original);cache[attr]={original,rendered};if(value!==rendered)el.setAttribute(attr,rendered);}
 }
 function updateLinks(){
- for(const a of document.querySelectorAll('a[href]')){const href=a.getAttribute('href');if(!/^(?:index\.html|\.\.\/index\.html|(?:web_demo\/)?(?:dataset|workflow|about)\.html)(?:[?#]|$)/.test(href))continue;const u=new URL(href,location.href);u.searchParams.set('lang',language);const relativePath=href.split(/[?#]/)[0];a.setAttribute('href',relativePath+u.search+u.hash);}
+ for(const a of document.querySelectorAll('a[href]')){const href=a.getAttribute('href');if(!/^(?:index\.html|\.\.\/index\.html|(?:web_demo\/)?(?:prediction|dataset|workflow|about)\.html)(?:[?#]|$)/.test(href))continue;const u=new URL(href,location.href);u.searchParams.set('lang',language);const relativePath=href.split(/[?#]/)[0];a.setAttribute('href',relativePath+u.search+u.hash);}
 }
 let pending=false;
 const observer=new MutationObserver(()=>{if(!pending){pending=true;queueMicrotask(()=>{pending=false;apply();});}});
