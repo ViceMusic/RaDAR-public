@@ -19,6 +19,11 @@ Email: **tian@lmd.ist.hokudai.ac.jp**
 
 ### Web Demo
 
-打开根目录 [index.html](index.html) 即可直接使用分子预测界面，无需跳转或构建。模型和资源在 `web_demo/` 下，本地双击也可使用。
+An interactive web demo is available for exploring peptide stability predictions in simulated intestinal fluid (SIF) and simulated gastric fluid (SGF).
 
-静态托管时请发布整个仓库根目录，保留 `index.html` 和完整的 `web_demo/` 目录结构。
+**[🌐 Launch RaDAR Web Demo](https://vicemusic.github.io/RaDAR-public/web_demo/prediction.html?lang=zh)**
+
+The demo supports SMILES-based molecular input and stability classification using Logistic Regression (LR), Random Forest (RF), and XGBoost (XGB). All predictions run locally in the browser without uploading molecular structures to a server.
+
+The website also provides access to dataset exploration, the RaDAR evaluation protocol, and project information.
+
