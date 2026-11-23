@@ -54,7 +54,7 @@ Chrome 直接打开 file:// 进行测试，不启动网页服务器。
 
 ## 本地文件
 
-- `../index.html`：外置启动入口；`prediction.html`：分子预测页面；`styles.css` / `app.js`：页面样式与交互。
+- `../index.html`：完整分子预测首页（无跳转）；`prediction.html`：兼容旧链接的预测页面；`styles.css` / `app.js`：页面样式与交互。
 - `chemistry.js` / `chemistry-data.js`：一致的特征计算与官方参数。
 - `inference.js`：三类模型的纯JS推理。
 - `models/`：模型JSON、直接加载的JS包装和配置。
@@ -124,10 +124,10 @@ RaDAR 协议页开头说明其定位为研究工作流的系统整理，并补�
 验证结果见 `tests/i18n_validation.json`：四页三语的桌面／手机布局、导航位置、预测状态保留、动态提示翻译、分子选择和视角保留、跨页与刷新语言保留。
 
 
-## 外置入口与资源边界
+## 首页与资源路径
 
-项目根目录 `index.html` 为启动入口，通过 `web_demo/entry.js` 转至 `web_demo/prediction.html`，保留语言参数。`web_demo/index.html` 保持删除。
+项目根目录 `index.html` 直接展示完整分子预测界面，不执行自动跳转。样式、脚本、模型和数据通过 `web_demo/` 相对路径加载，兼容本地双击和带仓库名前缀的静态网站路径。
 
-四个功能页面、Logo 和站内导航均在 `web_demo/` 内跳转：`prediction.html`、`dataset.html`、`workflow.html`、`about.html`。Logo 始终进入分子预测。站内导航不再依赖 `../index.html`，可直接打开或独立托管 `web_demo/prediction.html`。
+其他三个功能页面保留在 `web_demo/`；Logo 和“分子预测”导航统一返回 `../index.html`。`web_demo/prediction.html` 保留以兼容已有链接。
 
-样式、脚本、模型、数据、校徽及测试资源全部位于 `web_demo/`；不使用根目录的 README 或其他项目文件。预测页底部“查看模型与验证说明”是唯一主动打开 demo README 的说明链接，与 Logo 无关。
+部署时必须发布整个仓库根目录，包括 `index.html` 和完整的 `web_demo/`，不能只上传单个 HTML 文件。
