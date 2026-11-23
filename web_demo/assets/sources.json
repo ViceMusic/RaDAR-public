@@ -1,0 +1,11 @@
+{
+  "logos": {
+    "hokkaido-symbol.png": "https://www.global.hokudai.ac.jp/wp/wp-content/uploads/2025/02/symbol.png",
+    "kaust-logo.svg": "https://www.kaust.edu.sa/ResourcePackages/KAUSTMain/assets/dist/images/kaust-logo.svg"
+  },
+  "source_pages": {
+    "Hokkaido University": "https://www.global.hokudai.ac.jp/about/university-symbol/",
+    "KAUST": "https://www.kaust.edu.sa/en"
+  },
+  "usage": "Local author-card background watermarks; institutional marks retain original artwork."
+}

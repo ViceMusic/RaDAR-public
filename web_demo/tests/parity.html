@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Python / JavaScript parity</title><pre id="out">RUNNING</pre>
+<script src="../vendor/rdkit-wasm.js"></script><script src="../vendor/RDKit_minimal.js"></script>
+<script src="../chemistry-data.js"></script><script src="../chemistry.js"></script><script src="../inference.js"></script><script src="../models/weights.js"></script><script src="fixtures.js"></script>
+<script>
+(async()=>{try{await Chemistry.init();const errors=[],maxDescriptors=Array(24).fill(0),probabilityErrors={},referenceErrors={};let fpMismatch=0,featureLabels=0,referenceLabels=0,count=0;
+ for(const test of PARITY_FIXTURES){try{let a=Chemistry.featurize(test.smiles);for(let i=0;i<24;i++)maxDescriptors[i]=Math.max(maxDescriptors[i],Math.abs(a.features[i]-test.features[i]));for(let i=24;i<1048;i++)if(a.features[i]!==test.features[i])fpMismatch++;
+ for(const task of ['SIF','SGF'])for(const kind of ['LR','RF','XGB']){const key=task+'_'+kind,exp=test.probabilities[task][kind],p=Inference.predict(DEMO_MODELS[task][kind],a.features),pr=Inference.predict(DEMO_MODELS[task][kind],test.features);probabilityErrors[key]=Math.max(probabilityErrors[key]||0,Math.abs(p-exp));referenceErrors[key]=Math.max(referenceErrors[key]||0,Math.abs(pr-exp));if((p>=.5)!==(exp>=.5)){featureLabels++;errors.push({kind:'label',task,model:kind,smiles:test.smiles,p,exp})}if((pr>=.5)!==(exp>=.5))referenceLabels++;}
+ count++;}catch(e){errors.push({smiles:test.smiles,error:String(e)})}}
+ out.textContent=JSON.stringify({count,expected:PARITY_FIXTURES.length,fpMismatch,maxDescriptors,probabilityErrors,referenceErrors,featureLabels,referenceLabels,errors});document.title='DONE';
+}catch(e){out.textContent=JSON.stringify({error:String(e),stack:e.stack});document.title='ERROR'}})();
+</script>

@@ -1,0 +1,32 @@
+{
+  "filter_counts": {
+    "SIF": {
+      "US20140294902A1": 5,
+      "US9624268": 130,
+      "US9809623B2": 26,
+      "WO2017011820A2": 150,
+      "sif_sgf_second": 202
+    },
+    "SGF": {
+      "US9624268": 90,
+      "US9809623B2": 5,
+      "WO2017011820A2": 105,
+      "sif_sgf_second": 202
+    }
+  },
+  "projection_xy_max_pixel_difference": 0,
+  "clicked_selection": "record-0100",
+  "browser_morgan_parity": {
+    "checked": 513,
+    "failures": []
+  },
+  "sidebar_minimize_restore": true,
+  "mobile_horizontal_overflow": false,
+  "inference_navigation_and_initialization": true,
+  "external_network_requests": [],
+  "javascript_errors": [],
+  "csv_record_and_raw_measurement_roundtrip": true,
+  "original_csv_hashes_unchanged": true,
+  "json_js_wrapper_equal": true,
+  "interrupted_2d_transition_remains_xy": true
+}

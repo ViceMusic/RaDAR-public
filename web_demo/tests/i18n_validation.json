@@ -1,0 +1,71 @@
+{
+  "pages": [
+    {
+      "page": "index.html",
+      "language": "en",
+      "layout_ok": true
+    },
+    {
+      "page": "index.html",
+      "language": "ja",
+      "layout_ok": true
+    },
+    {
+      "page": "index.html",
+      "language": "zh",
+      "layout_ok": true
+    },
+    {
+      "page": "dataset.html",
+      "language": "en",
+      "layout_ok": true
+    },
+    {
+      "page": "dataset.html",
+      "language": "ja",
+      "layout_ok": true
+    },
+    {
+      "page": "dataset.html",
+      "language": "zh",
+      "layout_ok": true
+    },
+    {
+      "page": "workflow.html",
+      "language": "en",
+      "layout_ok": true
+    },
+    {
+      "page": "workflow.html",
+      "language": "ja",
+      "layout_ok": true
+    },
+    {
+      "page": "workflow.html",
+      "language": "zh",
+      "layout_ok": true
+    },
+    {
+      "page": "about.html",
+      "language": "en",
+      "layout_ok": true
+    },
+    {
+      "page": "about.html",
+      "language": "ja",
+      "layout_ok": true
+    },
+    {
+      "page": "about.html",
+      "language": "zh",
+      "layout_ok": true
+    }
+  ],
+  "prediction_state_preserved": true,
+  "dynamic_messages_translated": true,
+  "explorer_selection_and_camera_preserved": true,
+  "cross_route_and_reload_language_persistence": true,
+  "header_geometry_stable": true,
+  "javascript_errors": [],
+  "external_requests": []
+}

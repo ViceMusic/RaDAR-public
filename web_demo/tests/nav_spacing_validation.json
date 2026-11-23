@@ -1,0 +1,92 @@
+[
+  {
+    "width": 1440,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 1440,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 1440,
+    "language": "ja",
+    "no_overlap": true
+  },
+  {
+    "width": 1280,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 1280,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 1280,
+    "language": "ja",
+    "no_overlap": true
+  },
+  {
+    "width": 1200,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 1200,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 1200,
+    "language": "ja",
+    "no_overlap": true
+  },
+  {
+    "width": 1024,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 1024,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 1024,
+    "language": "ja",
+    "no_overlap": true
+  },
+  {
+    "width": 390,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 390,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 390,
+    "language": "ja",
+    "no_overlap": true
+  },
+  {
+    "width": 320,
+    "language": "zh",
+    "no_overlap": true
+  },
+  {
+    "width": 320,
+    "language": "en",
+    "no_overlap": true
+  },
+  {
+    "width": 320,
+    "language": "ja",
+    "no_overlap": true
+  }
+]

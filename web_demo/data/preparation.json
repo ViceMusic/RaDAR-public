@@ -1,0 +1,36 @@
+{
+  "record_count": 513,
+  "measurement_counts": {
+    "SIF": 513,
+    "SGF": 402
+  },
+  "ordering": "SIF_train.csv rows followed by SIF_test.csv rows; never uses id; preserves duplicate records.",
+  "sgf_record_matching": "Exact tuple (SMILES, source_name, SIF_class, SGF_class), occurrence-aware. Identical duplicate observations have no recoverable original identity beyond CSV row.",
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 1024,
+    "include_chirality": true,
+    "descriptors_added": false
+  },
+  "umap": {
+    "n_components": 3,
+    "n_neighbors": 15,
+    "min_dist": 0.12,
+    "metric": "jaccard",
+    "random_state": 42,
+    "n_jobs": 1,
+    "init": "spectral"
+  },
+  "versions": {
+    "rdkit": "2025.09.3",
+    "umap": "0.5.9.post2"
+  },
+  "projection": "One unsupervised 3D embedding fitted to all 513 records. SIF/SGF filter membership only. 2D is the same 3D embedding viewed along Z with orthographic projection; no refitting or jitter.",
+  "input_sha256": {
+    "SGF_test.csv": "599c81ae494561098dd7b80c45a856fbf537998607d1739911ed259ce755859c",
+    "SGF_train.csv": "45a7bd2779973d9cbec313b456ce3408caf6254a23eea58bc439e8299aa5d383",
+    "SIF_test.csv": "96d2f182979161f2b1a9e3b473b149bb3eedf4c6f63ae8b458ce68c1a6e19e26",
+    "SIF_train.csv": "9dd58d3bc4899a833d3c9de31f1ec588b14db4add9d560c22749d258823ace5f"
+  }
+}

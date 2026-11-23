@@ -1,0 +1,61 @@
+{
+  "invalid_input_handled": {
+    "error": true,
+    "hidden": true
+  },
+  "model_task_switches": [
+    {
+      "context": "SIF / LR",
+      "label": "正类 · 稳定",
+      "probability": "84.24%",
+      "hidden": false
+    },
+    {
+      "context": "SIF / RF",
+      "label": "负类 · 不稳定",
+      "probability": "43.31%",
+      "hidden": false
+    },
+    {
+      "context": "SIF / XGB",
+      "label": "正类 · 稳定",
+      "probability": "57.52%",
+      "hidden": false
+    },
+    {
+      "context": "SGF / LR",
+      "label": "正类 · 稳定",
+      "probability": "99.62%",
+      "hidden": false
+    },
+    {
+      "context": "SGF / RF",
+      "label": "正类 · 稳定",
+      "probability": "78.38%",
+      "hidden": false
+    },
+    {
+      "context": "SGF / XGB",
+      "label": "正类 · 稳定",
+      "probability": "97.90%",
+      "hidden": false
+    }
+  ],
+  "mobile_horizontal_overflow": false,
+  "ui_parity_result": "通过：499 个分子，2994 次预测；指纹差异 0 位，描述符最大差 0.00e+0，类别差异 0，概率最大差 1.06e-7。",
+  "external_network_requests": [],
+  "loaded_resources": [
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/index.html",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/styles.css",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/vendor/rdkit-wasm.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/vendor/RDKit_minimal.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/chemistry-data.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/chemistry.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/inference.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/models/weights.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/models/metadata.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/examples.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/app.js",
+    "file:///home/user/workspace/Private-SIGSGF-project/web_demo/tests/fixtures.js"
+  ]
+}
