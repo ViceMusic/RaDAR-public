@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=./web_demo/">
-    <title>RaDAR</title>
-</head>
-<body>
-    <a href="./web_demo/">Enter RaDAR</a>
-</body>
-</html>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIF / SGF · 分子稳定性预测</title><link rel="stylesheet" href="web_demo/styles.css"><link rel="stylesheet" href="web_demo/explorer.css"><link rel="stylesheet" href="web_demo/pages.css"><script defer src="web_demo/i18n-data.js"></script><script defer src="web_demo/i18n.js"></script></head>
+<body><header class="site-header"><a class="brand" href="index.html"><span class="brand-icon">R</span><span>RaDAR-Bench <small>PEPTIDE STABILITY BENCHMARK</small></span></a><nav class="site-nav" aria-label="主导航"><a href="index.html" aria-current="page">分子预测</a><a href="web_demo/dataset.html">数据集探索</a><a href="web_demo/workflow.html">RaDAR协议</a><a href="web_demo/about.html">来源与团队</a></nav><div class="header-actions"><a class="header-download" href="https://huggingface.co/datasets/Vicemusic5/RaDAR-Bench" target="_blank" rel="noopener noreferrer" aria-label="在 Hugging Face 下载 RaDAR-Bench" title="下载 RaDAR-Bench 数据集"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span>数据集下载</span></a><a class="header-contact" href="web_demo/about.html#contact">联系团队</a><select id="language-switch" class="language-switch" aria-label="界面语言" title="界面语言"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option></select></div></header>
+<main><section class="intro"><p class="eyebrow">INTERACTIVE DEMO / 01</p><h1 class="page-title">分子稳定性预测</h1><p class="subtitle">输入一个 SMILES，选择 SIF 或 SGF，查看模型预测的正负类别。</p></section>
+<div class="workspace"><section class="panel input-panel"><div class="panel-heading"><span class="step">01</span><h2>定义预测</h2><span class="tag">SMILES → Prediction</span></div>
+<fieldset><legend>预测任务</legend><div class="task-switch"><button type="button" class="task active" data-task="SIF" aria-pressed="true"><b>SIF</b><span>模拟肠液稳定性</span></button><button type="button" class="task" data-task="SGF" aria-pressed="false"><b>SGF</b><span>模拟胃液稳定性</span></button></div></fieldset>
+<label for="smiles" class="label">分子 SMILES <span>支持手性标记</span></label><textarea id="smiles" spellcheck="false" placeholder="在这里粘贴 SMILES，例如 CC(=O)NCC(=O)O"></textarea>
+<div class="examples-row"><span>试用现有样本</span><select id="examples" aria-label="加载现有测试样本"><option value="">选择一个样本…</option></select></div>
+<fieldset><legend>分类模型</legend><div class="model-switch"><button class="model active" data-model="LR" aria-pressed="true">LR <small>逻辑回归</small></button><button class="model" data-model="RF" aria-pressed="false">RF <small>随机森林</small></button><button class="model" data-model="XGB" aria-pressed="false">XGB <small>梯度提升树</small></button></div></fieldset>
+<button id="predict" class="primary" disabled>正在加载分子引擎…</button><p id="status" class="status" role="status" aria-live="polite">模型与分子计算资源均从本地文件加载。</p></section>
+<section class="panel result-panel"><div class="panel-heading"><span class="step">02</span><h2>预测结果</h2><span id="result-context" class="tag">SIF / LR</span></div>
+<div id="empty" class="empty"><div class="molecule-symbol">⌬</div><h3>让结构给出答案</h3><p>输入分子后，点击「预测稳定性」。<br>计算过程不会上传你的分子。</p></div>
+<div id="result" hidden><div class="result-top"><span id="result-label" class="classification"></span><span id="result-task" class="result-task"></span></div><div class="probability"><span id="probability">—</span><small>正类概率</small></div><div class="meter"><div id="meter-fill"></div><span></span></div><div class="meter-label"><span>负类</span><span>判定阈值 0.5</span><span>正类</span></div><p id="definition" class="definition"></p><div id="structure" class="structure" aria-label="分子结构图"></div><div class="result-actions"><span id="atom-count"></span><button id="download" class="text-button">下载预测 JSON ↗</button></div></div>
+</section></div>
+<section class="details-panel"><details><summary><span>计算与一致性检查</span><span class="detail-hint">Morgan 指纹 · 24 维描述符 · Python 对照</span></summary><div class="details-content"><div class="specs"><div><span>指纹</span><b>Morgan · 1024 bits</b><small>radius = 2 · chirality = true</small></div><div><span>完整输入</span><b>1048 维</b><small>24 维描述符 + 指纹，无标准化</small></div><div><span>运行方式</span><b>纯本地</b><small>HTML + CSS + JavaScript / WASM</small></div></div><p>模型为本 demo 独立训练，分别使用已有 seed_888 的 SIF / SGF 训练集。正类概率是模型分数，不代表实验测得的稳定时间。</p><div id="fingerprint" class="fingerprint" aria-label="Morgan指纹位图"></div><div class="test-row"><button id="run-tests" class="secondary" disabled>运行 Python / JS 对照</button><span id="test-status" role="status" aria-live="polite">包含现有分子及手性、带电等补充样例。</span></div><a href="web_demo/README.md" class="text-link">查看模型与验证说明 ↗</a></div></details></section>
+<footer><span>SIF / SGF · Research demo</span><span>用于研究演示 · 预测结果不能替代实验测定</span></footer></main>
+<script src="web_demo/vendor/rdkit-wasm.js"></script><script src="web_demo/vendor/RDKit_minimal.js"></script><script src="web_demo/chemistry-data.js"></script><script src="web_demo/chemistry.js"></script><script src="web_demo/inference.js"></script><script src="web_demo/models/weights.js"></script><script src="web_demo/models/metadata.js"></script><script src="web_demo/examples.js"></script><script src="web_demo/app.js"></script></body></html>

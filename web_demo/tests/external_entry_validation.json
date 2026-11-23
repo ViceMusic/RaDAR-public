@@ -1,0 +1,67 @@
+{
+  "external_entry": "/home/user/workspace/Private-SIGSGF-project/index.html",
+  "internal_entry_deleted": true,
+  "navigation_checked": [
+    "dataset.html",
+    "workflow.html",
+    "about.html"
+  ],
+  "prediction_results": [
+    {
+      "context": "SIF / LR",
+      "probability": "84.24%"
+    },
+    {
+      "context": "SIF / RF",
+      "probability": "43.31%"
+    },
+    {
+      "context": "SIF / XGB",
+      "probability": "57.52%"
+    },
+    {
+      "context": "SGF / LR",
+      "probability": "99.62%"
+    },
+    {
+      "context": "SGF / RF",
+      "probability": "78.38%"
+    },
+    {
+      "context": "SGF / XGB",
+      "probability": "97.90%"
+    }
+  ],
+  "lazy_fixture_parity_result": "Passed: 499 molecules, 2994 predictions; 0 fingerprint bit differences, max descriptor difference 0.00e+0, 0 class differences, max probability difference 1.06e-7.",
+  "language_preserved_on_return": true,
+  "desktop_mobile_layout_passed": true,
+  "local_resources": [
+    "/home/user/workspace/Private-SIGSGF-project/index.html",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/about.html",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/app.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/assets/hokkaido-symbol.png",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/assets/kaust-logo.svg",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/chemistry-data.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/chemistry.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/data/radar-bench.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/dataset.html",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/examples.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/explorer.css",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/explorer.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/i18n-data.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/i18n.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/inference.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/models/metadata.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/models/weights.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/pages.css",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/styles.css",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/tests/fixtures.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/vendor/RDKit_minimal.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/vendor/rdkit-wasm.js",
+    "/home/user/workspace/Private-SIGSGF-project/web_demo/workflow.html"
+  ],
+  "resources_outside_entry_and_web_demo": [],
+  "external_network_requests": [],
+  "javascript_errors": [],
+  "failed_resource_loads": []
+}

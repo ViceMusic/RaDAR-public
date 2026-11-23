@@ -1,5 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id);
+const demoResourceBase=new URL('.',document.currentScript.src);
 let task='SIF',kind='LR',last=null,ready=false;
 function status(text,error=false){$('status').textContent=text;$('status').classList.toggle('error',error);}
 function clearResult(){last=null;$('empty').hidden=false;$('result').hidden=true;$('fingerprint').replaceChildren();}
@@ -34,7 +35,7 @@ $('download').addEventListener('click',()=>{if(!last)return;const p=Inference.pr
 $('run-tests').addEventListener('click',async()=>{
  const button=$('run-tests');button.disabled=true;
  try{
-  if(!window.PARITY_FIXTURES)await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='tests/fixtures.js';s.onload=resolve;s.onerror=()=>reject(Error('测试样本加载失败'));document.head.append(s)});
+  if(!window.PARITY_FIXTURES)await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=new URL('tests/fixtures.js',demoResourceBase).href;s.onload=resolve;s.onerror=()=>reject(Error('测试样本加载失败'));document.head.append(s)});
   let done=0,fp=0,mismatch=0,maxProbability=0,maxDescriptor=0;
   for(const t of PARITY_FIXTURES){const actual=Chemistry.featurize(t.smiles);
    for(let i=0;i<1048;i++){if(i>=24&&actual.features[i]!==t.features[i])fp++;if(i<24)maxDescriptor=Math.max(maxDescriptor,Math.abs(actual.features[i]-t.features[i]));}
