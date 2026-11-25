@@ -1,0 +1,68 @@
+{
+  "reference": "https://vicemusic.github.io/SIF_SGF_Reference/",
+  "baseline": "9bb22aa",
+  "method": "Static HTML/CSS source review; no browser used",
+  "pages": {
+    "index.html": {
+      "text_unchanged": true,
+      "original_elements_and_attributes_unchanged": true,
+      "main_and_scripts_byte_identical": true,
+      "local_links_and_anchors": "passed",
+      "added_elements": [
+        "header-inner wrapper",
+        "reference-theme stylesheet"
+      ]
+    },
+    "web_demo/prediction.html": {
+      "text_unchanged": true,
+      "original_elements_and_attributes_unchanged": true,
+      "main_and_scripts_byte_identical": true,
+      "local_links_and_anchors": "passed",
+      "added_elements": [
+        "header-inner wrapper",
+        "reference-theme stylesheet"
+      ]
+    },
+    "web_demo/dataset.html": {
+      "text_unchanged": true,
+      "original_elements_and_attributes_unchanged": true,
+      "main_and_scripts_byte_identical": true,
+      "local_links_and_anchors": "passed",
+      "added_elements": [
+        "header-inner wrapper",
+        "reference-theme stylesheet"
+      ]
+    },
+    "web_demo/workflow.html": {
+      "text_unchanged": true,
+      "original_elements_and_attributes_unchanged": true,
+      "main_and_scripts_byte_identical": true,
+      "local_links_and_anchors": "passed",
+      "added_elements": [
+        "header-inner wrapper",
+        "reference-theme stylesheet"
+      ]
+    },
+    "web_demo/about.html": {
+      "text_unchanged": true,
+      "original_elements_and_attributes_unchanged": true,
+      "main_and_scripts_byte_identical": true,
+      "local_links_and_anchors": "passed",
+      "added_elements": [
+        "header-inner wrapper",
+        "reference-theme stylesheet"
+      ]
+    }
+  },
+  "css": {
+    "balanced_delimiters": true,
+    "responsive_breakpoints_px": [
+      1000,
+      640
+    ],
+    "reduced_motion": true,
+    "no_new_hidden_content": true,
+    "no_external_asset_dependencies": true
+  },
+  "logic_and_data": "Existing JavaScript, translations, model weights and datasets unchanged"
+}
