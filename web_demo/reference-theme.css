@@ -355,3 +355,55 @@ footer { border-top: 1px solid var(--line); margin-top: 32px; font-size: 13px; p
 @media (prefers-reduced-motion: reduce) {
   button, select, textarea, a, .meter > div { transition: none; }
 }
+
+/* Non-sticky shared footer. The inset divider belongs only to this region. */
+.site-footer {
+  display: block;
+  position: static;
+  width: 100%;
+  margin: 32px 0 0;
+  padding: 0;
+  border: 0;
+  background: #292c30;
+  color: #fff;
+  font-size: 14px;
+}
+.footer-inner {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  position: relative;
+  padding: 36px 0;
+  gap: 64px;
+}
+.footer-inner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 32px;
+  bottom: 32px;
+  width: 1px;
+  background: #ffffff40;
+}
+.footer-heading { margin: 0 0 8px; font-size: 13px; color: #e2e4e7; }
+.footer-name { margin: 0 0 3px; font-size: 23px; line-height: 1.4; font-weight: 650; }
+.site-footer a { color: #fff; }
+.footer-email { display: inline-block; font-size: 15px; text-decoration: none; overflow-wrap: anywhere; }
+.footer-email:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-note { display: flex; flex-direction: column; gap: 3px; margin-top: 18px; font-size: 12px; line-height: 1.7; color: #e2e4e7; }
+.footer-note a { font-size: 12px; }
+.footer-resources { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.footer-resource { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 12px 4px; border-radius: 6px; text-align: center; text-decoration: none; font-size: 13px; line-height: 1.5; }
+.footer-resource svg { display: block; width: 28px; height: 28px; flex-shrink: 0; }
+.footer-resource:hover { background: #ffffff14; }
+.site-footer a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+@media (max-width: 700px) {
+  .footer-inner { width: calc(100% - 24px); grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; padding: 28px 0; }
+  .footer-inner::after { left: calc((100% - 28px) * 1.1 / 2.1 + 14px); top: 28px; bottom: 28px; }
+  .footer-resources { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 4px; }
+  .footer-resource { font-size: 12px; padding: 10px 2px; }
+  .footer-resource svg { width: 25px; height: 25px; }
+  .footer-email { font-size: 13px; }
+}

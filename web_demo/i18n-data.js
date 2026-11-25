@@ -912,3 +912,12 @@ window.RADAR_TRANSLATIONS={
     "ja": "表示言語"
   }
 };
+// Shared footer labels.
+Object.assign(window.RADAR_TRANSLATIONS, {
+  "网站维护者": {"en": "Website maintainer", "ja": "サイト管理者"},
+  "项目资源链接": {"en": "Project resources", "ja": "プロジェクト関連リンク"},
+  "GitHub 仓库": {"en": "GitHub repository", "ja": "GitHub リポジトリ"},
+  "Hugging Face 数据集": {"en": "Hugging Face dataset", "ja": "Hugging Face データセット"},
+  "预测与训练 Pipeline": {"en": "Prediction and training pipeline", "ja": "予測・学習パイプライン"},
+  "旧版网站": {"en": "Legacy website", "ja": "旧サイト"}
+});
