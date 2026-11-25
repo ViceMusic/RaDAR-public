@@ -1,0 +1,13 @@
+# Python 3.12; versions used by the existing project.
+numpy==1.26.4
+scipy==1.16.3
+scikit-learn==1.8.0
+rdkit==2025.9.3
+xgboost==3.1.2
+torch==2.10.0
+torch-geometric==2.7.0
+transformers==4.36.2
+tokenizers==0.15.2
+huggingface-hub==0.36.2
+sentencepiece==0.2.3
+safetensors==0.8.0

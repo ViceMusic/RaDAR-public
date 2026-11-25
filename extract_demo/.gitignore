@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+representations/.weights/*
+!representations/.weights/.gitkeep
