@@ -6,19 +6,19 @@ RaDAR-Bench is a KAUST-curated, multi-source dataset for peptide stability predi
 
 ### 🦊 Introduction and website
 
-🔬 RaDAR is a research project focused on molecular stability prediction in simulated intestinal fluid (SIF) and simulated gastric fluid (SGF), providing resources for molecular feature extraction, model evaluation, and cross-source analysis.
+🔬 **RaDAR** is a research project focused on molecular stability prediction in simulated intestinal fluid (SIF) and simulated gastric fluid (SGF), providing resources for molecular feature extraction, model evaluation, and cross-source analysis.
 
-📦 Open-source Repository: RaDAR-public
+📦 **Open-source Repository:** [RaDAR-public](https://github.com/ViceMusic/RaDAR-public)
 
-🧬 Public Dataset: RaDAR-Bench (Hugging Face)
+🧬 **Public Dataset:** [RaDAR-Bench (Hugging Face)](https://huggingface.co/datasets/Vicemusic5/RaDAR-Bench)
 
-🌐 Online Demo: RaDAR Web Demo
+🌐 **Online Demo:** [RaDAR Web Demo](https://vicemusic.github.io/RaDAR-public/web_demo/prediction.html)
 
-📄 Preprint: Not yet available. Stay tuned for updates on our research.
+📄 **Preprint:** Not yet available. Stay tuned for updates on our research.
 
-🛠️ Feature Extraction and Model Reuse: This project provides implementation code, usage instructions, and reference model performance for molecular feature extraction. For details on data processing and feature extraction procedures, please visit the RaDAR Workflow Demo.
+🛠️ **Feature Extraction and Model Reuse:** This project provides implementation code, usage instructions, and reference model performance for molecular feature extraction. For details on data processing and feature extraction procedures, please visit the [RaDAR Workflow Demo](https://vicemusic.github.io/RaDAR-public/web_demo/workflow.html?lang=en).
 
-💻 Model Retraining: To retrain models using existing data or reuse the provided implementations, please refer to the SIF_SGF_Reference GitHub Repository.
+💻 **Model Retraining:** To retrain models using existing data or reuse the provided implementations, please refer to the [SIF_SGF_Reference GitHub Repository](https://github.com/ViceMusic/SIF_SGF_Reference).
 
 
 ### 📦 Dataset Download
